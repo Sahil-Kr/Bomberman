@@ -15,11 +15,14 @@ body {
   height: 100vh;
 }
 
-.grid {
+.container {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
+}
+
+.grid {
   height: 54rem;
   width: 54rem;
   /* background-color: aliceblue; */
@@ -30,14 +33,75 @@ body {
 
 .grid__tile {
   /* margin: 0.25rem; */
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
   width: 6rem;
   height: 6rem;
   background-color: white;
   border-radius: 5px;
   border: 1px solid aliceblue;
   transition: all 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.grid__tile:hover {
-  background-color: azure;
+/* .grid__tile:hover {
+  background-color: currentColor;
+} */
+
+.bomb {
+  background-color: rgba(255, 0, 0, 0.6);
+  background-image: url(./assets/bomb-emoji.png);
+  background-size: 80%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.safe {
+  background-color: rgba(0, 128, 0, 0.6);
+}
+
+.bottom-panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.game-score {
+  background-color: white;
+  border-radius: 2rem;
+  /* flex: 0 0 60%; */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+}
+.game-score span {
+  color: cadetblue;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 2rem;
+}
+
+.btn {
+  background-color: cadetblue;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
 }

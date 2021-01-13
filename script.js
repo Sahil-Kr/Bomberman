@@ -19,7 +19,7 @@ const init = () => {
   }
 
   const tiles = document.querySelectorAll(".grid__tile");
-
+  let selectedIndex = new Array();
   tiles.forEach(function (tile, index) {
     tile.addEventListener("click", (e) => {
       if (!gameOn) return;
@@ -31,7 +31,9 @@ const init = () => {
           tiles[num].classList.add("bomb");
         });
       } else {
+        if (selectedIndex.length > 0 && selectedIndex.includes(index)) return;
         tiles[index].classList.add("safe");
+        selectedIndex.push(index);
         tiles[index].textContent = ++score;
         scoreBoard.children[0].textContent = `Score : ${score}`;
       }

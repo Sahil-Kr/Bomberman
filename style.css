@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: beige;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  height: 54rem;
+  width: 54rem;
+  /* background-color: aliceblue; */
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid__tile {
+  /* margin: 0.25rem; */
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid aliceblue;
+  transition: all 0.2s;
+}
+
+.grid__tile:hover {
+  background-color: azure;
+}
